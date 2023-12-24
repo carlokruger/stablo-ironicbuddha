@@ -11,38 +11,18 @@ import { ChevronDownIcon } from "@heroicons/react/24/solid";
 import { myLoader } from "@/utils/all";
 
 export default function Navbar(props) {
-  const leftmenu = [
+  const rightmenu = [
     {
-      label: "Home",
-      href: "/"
-    },
-    {
-      label: "About",
-      href: "/about"
-    },
-    {
-      label: "Contact",
+      label: "contact",
       href: "/contact"
+    },
+    {
+      label: "all music",
+      href: "/archive"
     }
   ];
 
-  const rightmenu = [
-    {
-      label: "Archive",
-      href: "/archive"
-    },
-    {
-      label: "Pro Version",
-      href: "https://stablo-pro.web3templates.com/",
-      external: true,
-      badge: "new"
-    },
-    {
-      label: "Download",
-      href: "https://web3templates.com/templates/stablo-minimal-blog-website-template",
-      external: true
-    }
-  ];
+    
 
   const mobilemenu = [...leftmenu, ...rightmenu];
 
