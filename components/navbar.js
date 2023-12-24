@@ -12,10 +12,10 @@ import { myLoader } from "@/utils/all";
 
 export default function Navbar(props) {
   const leftmenu = [
-    {
+    /* {
       label: "Home",
       href: "/"
-    },
+    }, */
    
   ];
 
@@ -72,7 +72,7 @@ export default function Navbar(props) {
                       />
                     ) : (
                       <span className="block text-center">
-                        Stablo
+                        carlo
                       </span>
                     )}
                   </Link>
