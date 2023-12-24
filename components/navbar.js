@@ -11,6 +11,14 @@ import { ChevronDownIcon } from "@heroicons/react/24/solid";
 import { myLoader } from "@/utils/all";
 
 export default function Navbar(props) {
+  const leftmenu = [
+    {
+      label: "Home",
+      href: "/"
+    },
+   
+  ];
+
   const rightmenu = [
     {
       label: "contact",
@@ -21,8 +29,6 @@ export default function Navbar(props) {
       href: "/archive"
     }
   ];
-
-    
 
   const mobilemenu = [...leftmenu, ...rightmenu];
 
