@@ -12,8 +12,8 @@ async function sharedMetaData(params) {
     title: {
       default:
         settings?.title ||
-        "iroinicbuddha",
-      template: "%s | Stabloironicbuddha"
+        "ironicbuddha",
+      template: "%s | ironicbuddha"
     },
     description:
       settings?.description ||
