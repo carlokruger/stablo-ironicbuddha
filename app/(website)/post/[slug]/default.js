@@ -98,7 +98,7 @@ export default function Post(props) {
             <Link
               href="/"
               className="bg-brand-secondary/20 rounded-full px-5 py-2 text-sm text-blue-600 dark:text-blue-500 ">
-              ← View all posts
+              ← View all music
             </Link>
           </div>
           {post.author && <AuthorCard author={post.author} />}
