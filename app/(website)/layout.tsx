@@ -12,8 +12,8 @@ async function sharedMetaData(params) {
     title: {
       default:
         settings?.title ||
-        "Stablo - Blog Template for Next.js & Sanity CMS",
-      template: "%s | Stablo"
+        "iroinicbuddha",
+      template: "%s | Stabloironicbuddha"
     },
     description:
       settings?.description ||
@@ -21,7 +21,7 @@ async function sharedMetaData(params) {
     keywords: ["Next.js", "Sanity", "Tailwind CSS"],
     authors: [{ name: "Surjith" }],
     canonical: settings?.url,
-    openGraph: {
+    /* openGraph: {
       images: [
         {
           url:
@@ -31,11 +31,11 @@ async function sharedMetaData(params) {
           height: 600
         }
       ]
-    },
-    twitter: {
+    }, */
+    /* twitter: {
       title: settings?.title || "Stablo Template",
       card: "summary_large_image"
-    },
+    }, */
     robots: {
       index: true,
       follow: true
