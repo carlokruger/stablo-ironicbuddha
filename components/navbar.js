@@ -25,7 +25,7 @@ export default function Navbar(props) {
       href: "/contact"
     },
     {
-      label: "all music",
+      label: "music",
       href: "/archive"
     }
   ];
@@ -63,19 +63,19 @@ export default function Navbar(props) {
                 </div>
                 <div className="flex w-full items-center justify-between md:w-auto">
                 <Link href="/" className="w-28 dark:hidden">
-  <Image
+  <img
     src="/img/logo-white.svg"
-    alt="ironicbuddha"
-    priority={true}
-    sizes="(max-width: 640px) 100vw, 200px"
+    alt="carironicbuddhalo"
+    loading="eager"
+    className="w-full"
   />
 </Link>
 <Link href="/" className="hidden w-28 dark:block">
-  <Image
+  <img
     src="/img/logo-white.svg"
     alt="ironicbuddha"
-    priority={true}
-    sizes="(max-width: 640px) 100vw, 200px"
+    loading="eager"
+    className="w-full"
   />
 </Link>
                   <Disclosure.Button
