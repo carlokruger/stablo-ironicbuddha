@@ -65,7 +65,7 @@ export default function Navbar(props) {
                 <Link href="/" className="w-28 dark:hidden">
   <img
     src="/img/logo-white.svg"
-    alt="carironicbuddhalo"
+    alt="ironicbuddhalo"
     loading="eager"
     className="w-full"
   />
