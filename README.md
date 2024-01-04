@@ -76,7 +76,6 @@ Alternatively, you can deploy to other services such as Netlify or Cloudflare Pa
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/web3templates/stablo/)
 
-
 ## Step 2: Set up the project locally.
 
 Once you have deployed the website, it will look like empty or not configured properly. This is expected. We need to do few more steps to make it as seen on the demo.

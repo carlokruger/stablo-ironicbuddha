@@ -9,51 +9,51 @@
 /*Custom Styles Here*/
 
 .bg-container {
-    width: 100%;
-  }
-  
-  .bg-container img {
-    width: 100%;
-    height: auto;
-  }
+  width: 100%;
+}
 
-  .bg-centered-text {
-    text-align: center;
-  }
+.bg-container img {
+  width: 100%;
+  height: auto;
+}
 
-  .bgnew-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .image-bgnew-container {
-    position: relative;
-  }
-  
-  .text-bgnew-container {
-    position: absolute;
-    top: 25%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
-  
- /*  .custom-bg-image {
+.bg-centered-text {
+  text-align: center;
+}
+
+.bgnew-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-bgnew-container {
+  position: relative;
+}
+
+.text-bgnew-container {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/*  .custom-bg-image {
     background-size: 100% auto;
     height: 1092px;
   } */
-  .custom-bg-image {
-    width: 100vw;
-    height: 1092px;
-    background-size: 100% auto;
-    background-position: center;
-  }
+.custom-bg-image {
+  width: 100vw;
+  height: 1092px;
+  background-size: 100% auto;
+  background-position: center;
+}
 
-  .full-width-container {
-    width: 100vw;
-    padding-left: 0;
-    padding-right: 0;
-    margin-left: 0;
-    margin-right: 0;
-  }
+.full-width-container {
+  width: 100vw;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 0;
+  margin-right: 0;
+}

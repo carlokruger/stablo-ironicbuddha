@@ -17,7 +17,7 @@ import { table } from "@sanity/table";
 import { codeInput } from "@sanity/code-input";
 
 export const PREVIEWABLE_DOCUMENT_TYPES: string[] = ["post"];
-console.log(projectId);
+//console.log(projectId);
 
 export default defineConfig({
   name: "default",

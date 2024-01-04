@@ -10,9 +10,7 @@ async function sharedMetaData(params) {
     // enable this for resolving opengraph image
     // metadataBase: new URL(settings.url),
     title: {
-      default:
-        settings?.title ||
-        "ironicbuddha",
+      default: settings?.title || "ironicbuddha",
       template: "%s | ironicbuddha"
     },
     description:
@@ -60,4 +58,4 @@ export default async function Layout({ children, params }) {
   );
 }
 // enable revalidate for all pages in this layout
-// export const revalidate = 60;
+export const revalidate = 60;

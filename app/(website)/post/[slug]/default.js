@@ -34,7 +34,7 @@ export default function Post(props) {
             <CategoryLabel categories={post.categories} />
           </div>
 
-          <h1 className="text-brand-primary mb-3 mt-2 text-center text-3xl font-semibold tracking-tight dark:text-white lg:text-4xl lg:leading-snug">
+          <h1 className="text-brand-primary mb-3 mt-2 text-center text-3xl font-semibold tracking-tight lg:text-4xl lg:leading-snug dark:text-white">
             {post.title}
           </h1>
 
@@ -93,6 +93,12 @@ export default function Post(props) {
         <article className="mx-auto max-w-screen-md ">
           <div className="prose mx-auto my-3 dark:prose-invert prose-a:text-blue-600">
             {post.body && <PortableText value={post.body} />}
+            {/* Get the posts SoundCloud embed code and render as HTML */}
+            {post.soundcloud && (
+              <html
+                dangerouslySetInnerHTML={{ __html: post.soundcloud }}
+              />
+            )}
           </div>
           <div className="mb-7 mt-7 flex justify-center">
             <Link
