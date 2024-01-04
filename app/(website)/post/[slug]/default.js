@@ -8,6 +8,8 @@ import { parseISO, format } from "date-fns";
 
 import CategoryLabel from "@/components/blog/category";
 import AuthorCard from "@/components/blog/authorCard";
+import Soundcloud from "@/components/soundcloud/soundcloud";
+
 
 export default function Post(props) {
   const { loading, post } = props;
@@ -95,10 +97,9 @@ export default function Post(props) {
             {post.body && <PortableText value={post.body} />}
             {/* Get the posts SoundCloud embed code and render as HTML */}
             {post.soundcloud && (
-              <html
-                dangerouslySetInnerHTML={{ __html: post.soundcloud }}
-              />
+              <Soundcloud url={post.soundcloud} />
             )}
+
           </div>
           <div className="mb-7 mt-7 flex justify-center">
             <Link
