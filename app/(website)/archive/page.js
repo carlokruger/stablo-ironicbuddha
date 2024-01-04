@@ -11,13 +11,11 @@ export default async function ArchivePage({ searchParams }) {
   return (
     <>
       <Container className="relative">
-        <h1 className="text-center text-3xl font-semibold tracking-tight dark:text-white lg:text-4xl lg:leading-snug">
+        <h1 className="text-center text-3xl font-semibold tracking-tight lg:text-4xl lg:leading-snug dark:text-white">
           music
         </h1>
         <div className="text-center">
-          <p className="mt-2 text-lg">
-            here is all my music
-          </p>
+          <p className="mt-2 text-lg">here is all my music</p>
         </div>
         <Suspense
           key={searchParams.page || "1"}

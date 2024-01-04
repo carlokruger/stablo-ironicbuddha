@@ -1,5 +1,5 @@
 const TablePreview = ({ table }) => {
-  console.log("eee", table);
+  //console.log("eee", table);
 
   if (!table) {
     return <p>Table: Add Values</p>;
