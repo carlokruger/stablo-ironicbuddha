@@ -104,8 +104,8 @@ export default function Post(props) {
           <div className="mb-7 mt-7 flex justify-center">
             <Link
               href="/"
-              className="bg-brand-secondary/20 rounded-full px-5 py-2 text-sm text-blue-600 dark:text-blue-500 ">
-              ← View all music
+              className="bg-brand-secondary/20 rounded-full px-5 py-2 text-sm text-grey-600 dark:text-grey-500 ">
+              ← show all music
             </Link>
           </div>
           {post.author && <AuthorCard author={post.author} />}
