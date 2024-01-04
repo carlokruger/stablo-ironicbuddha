@@ -96,7 +96,9 @@ export default function Post(props) {
           <div className="prose mx-auto my-3 dark:prose-invert prose-a:text-blue-600">
             {post.body && <PortableText value={post.body} />}
             {/* Get the posts SoundCloud embed code and render as HTML */}
-            <Soundcloud url={post.soundcloud} />
+            {post.soundcloud && (
+              <Soundcloud url={post.soundcloud} />
+            )}
 
           </div>
           <div className="mb-7 mt-7 flex justify-center">
