@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+a<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -256,7 +256,7 @@
           text-align: center;
           text-decoration: none;
         ">
-        carlo kruger
+        ironicbuddha
       </div>
 
       <style>
@@ -264,17 +264,19 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          margin: 10px;
-          padding: 10px;
+          width: 300px; /* Increased width to fit email */
+          min-height: 48px;
+          margin: 10px auto;
+          padding: 0 20px;
           text-decoration: none;
-          position: relative;
           background-color: transparent;
           color: var(--accentColor);
           border: solid var(--accentColor) 2px;
           border-radius: 10px;
           font-size: 1rem;
           text-align: center;
-          width: 200px;
+          box-sizing: border-box;
+          transition: background 0.2s, color 0.2s;
         }
 
         .link img {
@@ -284,62 +286,64 @@
         }
 
         .link span {
-          margin-left: 10px;
+          margin-left: 0;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
         }
       </style>
 
       <div
         id="links"
         style="
-          max-width: 250px;
-          width: 200px;
+          max-width: 320px;
+          width: 300px;
+          margin: 27px auto;
           display: flex;
           flex-direction: column;
-          align-items: flex-start;
+          align-items: center;
           justify-content: center;
-          margin: 27px auto;
         ">
         <a
           class="link"
           href="https://soundcloud.com/ironicbuddha"
           target="_blank">
-          <img src="/img/soundcloud.png" alt="soundcloud" />
+          <img src="soundcloud.png" alt="soundcloud" />
           <span>soundcloud</span>
         </a>
         <a
           class="link"
           href="https://www.mixcloud.com/theothercarlokruger/"
           target="_blank">
-          <img src="/img/mixcloud.png" alt="mixcloud" />
+          <img src="mixcloud.png" alt="mixcloud" />
           <span>mixcloud</span>
         </a>
         <a
           class="link"
           href="https://ironicbuddha.bandcamp.com/"
           target="_blank">
-          <img src="/img/bandcamp.png" alt="bandcamp" />
+          <img src="bandcamp.png" alt="bandcamp" />
           <span>bandcamp</span>
         </a>
         <a
           class="link"
           href="https://ohai.social/@ironicbuddha"
           target="_blank">
-          <img src="/img/mastodon.png" alt="mastodon" />
+          <img src="mastodon.png" alt="mastodon" />
           <span>mastodon</span>
         </a>
-
         <a
           class="link"
           href="https://www.facebook.com/theothercarlokruger"
           target="_blank">
-          <img src="/img/zuckbook.png" alt="zuckbook" />
+          <img src="zuckbook.png" alt="zuckbook" />
           <span>zuckbook</span>
         </a>
         <a
           class="link"
           href="mailto:carlo@carlokruger.com"
           target="_blank">
-          <img src="/img/email.png" alt="email" />
+          <img src="email.png" alt="email" />
           <span>ironicbuddha@gmail.com</span>
         </a>
       </div>

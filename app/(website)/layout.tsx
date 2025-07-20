@@ -49,6 +49,9 @@ export default async function Layout({ children, params }) {
   const settings = await getSettings();
   return (
     <>
+      <head>
+        <meta name="facebook-domain-verification" content="gam7b8mjvao9e766eww9qoibse3zxy" />
+      </head>
       <Navbar {...settings} />
 
       <div>{children}</div>
