@@ -17,7 +17,7 @@ module.exports = {
         // to change, update font in _document.js
         sans: ["var(--font-inter)", ...defaultTheme.fontFamily.sans],
         serif: ["var(--font-lora)", ...defaultTheme.fontFamily.serif],
-        stock: [defaultTheme.fontFamily.sans]
+        stock: defaultTheme.fontFamily.sans
       },
       aspectRatio: {
         "4/3": "4 / 3",
@@ -27,8 +27,7 @@ module.exports = {
       }
     }
   },
-  variants: {
-    extend: {}
-  },
-  plugins: [require("@tailwindcss/typography")]
+  plugins: [
+    require("@tailwindcss/typography")
+  ]
 };
