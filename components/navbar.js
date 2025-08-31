@@ -63,15 +63,15 @@ export default function Navbar(props) {
                 <div className="flex w-full items-center justify-between md:w-auto">
                   <Link href="/" className="w-28 dark:hidden">
                     <img
-                      src="/img/logo-white.svg"
-                      alt="ironicbuddhalo"
+                      src="/img/monumentlogo.png"
+                      alt="ironicbuddha"
                       loading="eager"
                       className="w-full"
                     />
                   </Link>
                   <Link href="/" className="hidden w-28 dark:block">
                     <img
-                      src="/img/logo-white.svg"
+                      src="/img/monumentlogo.png"
                       alt="ironicbuddha"
                       loading="eager"
                       className="w-full"
