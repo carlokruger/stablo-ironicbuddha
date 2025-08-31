@@ -1,5 +1,5 @@
 //export const useCdn = process.env.NODE_ENV === "production";
-export const useCdn = false;
+export const useCdn = false; // Disabled for stable connections
 
 /**
  * As this file is reused in several other files, try to keep it lean and small.
