@@ -14,7 +14,7 @@ export default async function Post({ searchParams }) {
   // Define the parameters for fetching posts based on the current page
   const params = {
     pageIndex: (pageIndex - 1) * POSTS_PER_PAGE,
-    limit: pageIndex * POSTS_PER_PAGE
+    limit: ((pageIndex - 1) * POSTS_PER_PAGE) + POSTS_PER_PAGE
   };
 
   const posts = await getPaginatedPosts(params);

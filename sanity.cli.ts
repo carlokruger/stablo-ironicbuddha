@@ -5,5 +5,6 @@ export default defineCliConfig({
   api: {
     projectId: projectId,
     dataset: dataset
-  }
+  },
+  studioHost: 'ironicbuddha'
 });

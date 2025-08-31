@@ -5,8 +5,6 @@ import Loading from "@/components/loading";
 
 export const dynamic = "force-dynamic";
 
-export const runtime = "edge";
-
 export default async function ArchivePage({ searchParams }) {
   return (
     <>
@@ -27,4 +25,4 @@ export default async function ArchivePage({ searchParams }) {
   );
 }
 
-// export const revalidate = 60;
+export const revalidate = 60;
