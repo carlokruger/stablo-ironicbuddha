@@ -26,6 +26,10 @@ export default function Navbar(props) {
     {
       label: "music",
       href: "/archive"
+    },
+    {
+      label: "manifesto",
+      href: "/manifesto"
     }
   ];
 

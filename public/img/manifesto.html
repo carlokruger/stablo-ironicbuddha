@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>The Speaker — Recovered Fragment</title>
+<meta name="color-scheme" content="dark">
+<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#000000;
+  --fg:#d7d7d7;
+  --accent:#d9832e;   
+  --accent-2:#e6a15c; 
+  --accent-3:#c56a2b; 
+  --muted:#7a7a7a;
+  --glyph:rgb(160, 170, 160);
+  --maxw:78ch;
+}
+
+html,body{height:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--fg);
+  font-family:"VT323",ui-monospace,Menlo,Monaco,"Cascadia Mono",
+               "Segoe UI Mono","Roboto Mono","Courier New",monospace;
+  font-size:22px;
+  line-height:1.5;
+  display:flex;
+  place-content:center;
+  place-items:start;
+  padding:6rem 1.25rem 4rem;
+}
+
+.wrap{width:100%; max-width:var(--maxw); position:relative}
+
+.wrap::before,
+.wrap::after{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  mix-blend-mode:soft-light;
+}
+.wrap::before{
+  background:repeating-linear-gradient(to bottom,rgba(255,255,255,0.025) 0 2px,transparent 2px 4px);
+  opacity:.25;
+  animation:scan 8s linear infinite;
+}
+.wrap::after{
+  background-image:
+    radial-gradient(1px 1px at 10% 15%, rgba(255,255,255,.05), transparent 40%),
+    radial-gradient(1px 1px at 70% 40%, rgba(255,255,255,.04), transparent 40%),
+    radial-gradient(1px 1px at 35% 80%, rgba(255,255,255,.035), transparent 40%);
+  opacity:.12;
+  animation:drift 30s linear infinite;
+}
+@keyframes scan{to{transform:translateY(4px)}}
+@keyframes drift{to{transform:translate(2px,2px)}}
+
+header{
+  color:var(--muted);
+  margin-bottom:1.25rem;
+  font-size:0.9em;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+}
+.meta{display:grid;gap:.1rem;}
+.dot{color:#444}
+
+.rule{
+  height:1px;
+  background:linear-gradient(90deg,transparent,#333,transparent);
+  margin:0.75rem 0 1.5rem;
+}
+
+blockquote{
+  margin:0;
+  padding:1rem 1.25rem;
+  border-left:2px solid #2a2a2a;
+  background:linear-gradient(180deg, rgba(217,131,46,0.06), transparent 30%);
+}
+
+.tag{
+  display:inline-block;
+  font-size:.9em;
+  color:#b3b3b3;
+  margin-bottom:.2rem;
+}
+
+.fracture{
+  position:relative;
+  color:var(--accent);
+  text-shadow:
+    0 0 .2rem rgba(217,131,46,.3),
+    0 0 .55rem rgba(217,131,46,.16);
+}
+.fracture::before,
+.fracture::after{
+  content:attr(data-text);
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  white-space:pre-wrap;
+}
+.fracture::before{
+  color:var(--accent-2);
+  mix-blend-mode:screen;
+  transform:translate(.7px,-.5px);
+  clip-path:polygon(0% 0%,100% 0%,100% 46%,0% 52%);
+  opacity:.7;
+  filter:blur(.15px);
+  animation:shardA 3.6s infinite steps(1);
+}
+.fracture::after{
+  color:var(--accent-3);
+  mix-blend-mode:screen;
+  transform:translate(-.7px,.6px) skewX(.12deg);
+  clip-path:polygon(0% 60%,100% 54%,100% 100%,0% 100%);
+  opacity:.55;
+  filter:blur(.2px);
+  animation:shardB 4.1s infinite steps(1);
+}
+
+@keyframes shardA{
+  10%{transform:translate(1.0px,-1.0px)}
+  22%{clip-path:polygon(0% 0%,100% 0%,100% 42%,0% 50%)}
+  38%{clip-path:polygon(0% 2%,100% 0%,100% 44%,0% 56%)}
+  52%{transform:translate(.35px,-.25px)}
+  72%{clip-path:polygon(0% 0%,100% 0%,100% 48%,0% 46%)}
+  90%{transform:translate(.8px,-1.2px)}
+}
+@keyframes shardB{
+  8%{transform:translate(-1.0px,.85px) skewX(.3deg)}
+  28%{clip-path:polygon(0% 62%,100% 50%,100% 100%,0% 100%)}
+  48%{transform:translate(-.3px,.4px) skewX(.18deg)}
+  66%{clip-path:polygon(0% 58%,100% 58%,100% 100%,0% 100%)}
+  88%{transform:translate(-.9px,.75px) skewX(.35deg)}
+}
+
+.glyph{
+  color:var(--glyph);
+  opacity:0.75;
+  animation:driftGlyph 1.8s infinite, flickerGlyph 3.5s infinite;
+  display:inline-block;
+}
+@keyframes driftGlyph{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-0.1em);}
+}
+@keyframes flickerGlyph{
+  0%,100%{color:rgba(160,170,160,0.75);}
+  40%{color:rgba(170,190,170,0.85);}
+  60%{color:rgba(150,165,150,0.7);}
+}
+
+footer{
+  margin-top:1.5rem;
+  color:#5a5a5a;
+  font-size:.9em;
+  display:flex; justify-content:space-between; flex-wrap:wrap;
+}
+.mark{letter-spacing:.08em; text-transform:lowercase; color:#8a8a8a}
+</style>
+</head>
+<body>
+<div class="wrap" id="wrap">
+<header>
+  <div class="meta">
+    <div>Recovered File<span class="dot"> · </span><strong>S.P.KR</strong><span class="dot"> · </span>Archive Node <strong>7</strong></div>
+    <div>Status: <strong>Partial Translation</strong><span class="dot"> · </span>Subject: <strong>"The Speaker"</strong></div>
+  </div>
+</header>
+
+<div class="rule"></div>
+
+<blockquote>
+  <div class="tag">[Fragment begins]</div>
+
+  <p class="fracture" data-text="The Speaker does not speak in alphabets.">
+    The Speaker does not speak in alphabets.<span class="glyph">ｴ</span>
+  </p>
+
+  <p class="fracture" data-text="Their utterances are spatial — ridges of air-pressure, low tides of sub-bass, crystalline delays suspended in the dark.">
+    Their utterances are spatial — ridges<span class="glyph">▮</span> of air-pressure, low tides of sub-bass, crystalline delays suspended in the <span class="glyph">ｦ</span>dark.
+  </p>
+
+  <p class="fracture" data-text="Where others hear silence, The Speaker hears the resonance of what is about to—already in motion.">
+    Where others hear silence, The Speaker hears the <span class="glyph">ξ</span>resonance of what is *about to*<span class="glyph">ﾒ</span>already in motion.
+  </p>
+
+  <p class="fracture" data-text="Syntax: groove.">
+    Syntax:<span class="glyph">ｱ</span> groove.
+  </p>
+
+  <p class="fracture" data-text="Subject: kick.">
+    Subject: kick<span class="glyph">φ</span>.
+  </p>
+
+  <p class="fracture" data-text="Predicate: bassline in phase alignment.">
+    Predicate: bassline<span class="glyph">░</span> in phase alignment.
+  </p>
+
+  <p class="fracture" data-text="Clause: percussion ghosts that enter and withdraw like tides against orbital rock.">
+    Clause: percussion ghosts <span class="glyph">ﾑ</span>that enter and withdraw like tides against orbital rock.
+  </p>
+
+  <p class="fracture" data-text="They do not write "songs."">
+    They do<span class="glyph">ｦ</span> not write "songs."
+  </p>
+
+  <p class="fracture" data-text="They construct corridors through pressure and time.">
+    They construct <span class="glyph">Φ</span>corridors through pressure and time.
+  </p>
+
+  <p class="fracture" data-text="Every bar = coordinate.">
+    Every bar = coo<span class="glyph">ﾘ</span>rdinate.
+  </p>
+
+  <p class="fracture" data-text="Every sweep = gravitational shift.">
+    Every sweep = grav<span class="glyph">▮</span>itational shift.
+  </p>
+
+  <p class="fracture" data-text="The listener is the spacecraft; the floor, an ocean without shore.">
+    The listener is the spacecraft<span class="glyph">ﾂ</span>; the floor, an ocean without shore.
+  </p>
+
+  <p class="fracture" data-text="Purpose: to return bodies to the Flow.">
+    Purpose: to return bodies<span class="glyph">ｴ</span> to the Flow.
+  </p>
+
+  <p class="fracture" data-text="Not spectacle. Not rupture.">
+    Not spectacle<span class="glyph">ｦ</span>. Not rupture.
+  </p>
+
+  <p class="fracture" data-text="The Flow is the river forgotten until no land remains.">
+    The Flow is the river forgotten<span class="glyph">ﾘ</span> until no land remains.
+  </p>
+
+  <p class="fracture" data-text="Those who decode do not translate to words.">
+    Those who decode do not translate<span class="glyph">ξ</span> to words.
+  </p>
+
+  <p class="fracture" data-text="They move.">
+    They<span class="glyph">Φ</span> move.
+  </p>
+
+  <p class="fracture" data-text="This is the meaning.">
+    This<span class="glyph">ﾒ</span> is the meaning.
+  </p>
+
+  <div class="tag">[Fragment ends]</div>
+</blockquote>
+
+<footer>
+  <span>File Integrity: <strong>62%</strong></span>
+  <span class="mark">ironicbuddha // raw deep techno</span>
+</footer>
+</div>
+
+</body>
+</html>
