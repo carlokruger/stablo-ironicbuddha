@@ -264,7 +264,7 @@ a<!DOCTYPE html>
           display: flex;
           align-items: center;
           justify-content: center;
-          width: 300px; /* Increased width to fit email */
+          width: 250px; /* Reduced width for more compact layout */
           min-height: 48px;
           margin: 10px auto;
           padding: 0 20px;
@@ -291,19 +291,74 @@ a<!DOCTYPE html>
           overflow: hidden;
           text-overflow: ellipsis;
         }
-      </style>
 
-      <div
-        id="links"
-        style="
-          max-width: 320px;
-          width: 300px;
+        /* Responsive grid layout for links container */
+        #links {
           margin: 27px auto;
           display: flex;
           flex-direction: column;
           align-items: center;
           justify-content: center;
-        ">
+          max-width: 320px;
+          width: 300px;
+        }
+
+        /* Grid layout for landscape/tablet and up */
+        @media (min-width: 768px) and (orientation: landscape),
+               (min-width: 1024px) {
+          #links {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 1000px;
+            width: 100%;
+            padding: 0 20px;
+            box-sizing: border-box;
+          }
+          
+          .link {
+            margin: 0;
+            width: 250px;
+            justify-self: center;
+          }
+        }
+
+        /* Ultra-wide screens optimization */
+        @media (min-width: 1400px) {
+          #links {
+            gap: 25px;
+            max-width: 1200px;
+          }
+          
+          .link {
+            width: 250px;
+          }
+        }
+      </style>
+
+      <div id="links">
+        <a
+          class="link"
+          href="https://music.apple.com/us/artist/ironicbuddha/1798751691"
+          target="_blank">
+          <img src="apple-music-svgrepo-com.png" alt="apple music" />
+          <span>apple music</span>
+        </a>
+        <a
+          class="link"
+          href="https://open.spotify.com/artist/4BmnsP49xwkBYmbmJDFVnv"
+          target="_blank">
+          <img src="Spotify-Icon-white-Logo.wine.png" alt="spotify" />
+          <span>spotify</span>
+        </a>
+        <a
+          class="link"
+          href="https://www.beatport.com/artist/ironicbuddha/1294846"
+          target="_blank">
+          <img src="TBG-PrimaryIcon-White.svg" alt="beatport" />
+          <span>beatport</span>
+        </a>
         <a
           class="link"
           href="https://soundcloud.com/ironicbuddha"
@@ -344,7 +399,7 @@ a<!DOCTYPE html>
           href="mailto:carlo@carlokruger.com"
           target="_blank">
           <img src="email.png" alt="email" />
-          <span>ironicbuddha@ironicbuddha.com</span>
+          <span>ironicbuddha</span>
         </a>
       </div>
     </div>
