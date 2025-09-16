@@ -9,6 +9,9 @@ import { parseISO, format } from "date-fns";
 import CategoryLabel from "@/components/blog/category";
 import AuthorCard from "@/components/blog/authorCard";
 import Soundcloud from "@/components/soundcloud/soundcloud";
+import AppleMusic from "@/components/streaming-embeds/apple-music";
+import Spotify from "@/components/streaming-embeds/spotify";
+import Beatport from "@/components/streaming-embeds/beatport";
 
 
 export default function Post(props) {
@@ -98,6 +101,21 @@ export default function Post(props) {
             {/* Get the posts SoundCloud embed code and render as HTML */}
             {post.soundcloud && (
               <Soundcloud url={post.soundcloud} />
+            )}
+            
+            {/* Apple Music embed */}
+            {post.appleMusicEmbed && (
+              <AppleMusic embedCode={post.appleMusicEmbed} />
+            )}
+            
+            {/* Spotify embed */}
+            {post.spotifyEmbed && (
+              <Spotify embedCode={post.spotifyEmbed} />
+            )}
+            
+            {/* Beatport embed */}
+            {post.beatportEmbed && (
+              <Beatport embedCode={post.beatportEmbed} />
             )}
 
           </div>
