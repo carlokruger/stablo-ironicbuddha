@@ -41,7 +41,7 @@
     "react-refractor": "^2.1.7",
     "sanity": "3.99.0",
     "sanity-plugin-asset-source-unsplash": "^1.0.6",
-    "styled-components": "6.0.0",
+    "styled-components": "6.1.19",
     "swr": "^2.1.2",
     "typescript": "^5.0.4"
   },
