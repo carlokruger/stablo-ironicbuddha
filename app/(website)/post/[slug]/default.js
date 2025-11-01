@@ -12,6 +12,7 @@ import Soundcloud from "@/components/soundcloud/soundcloud";
 import AppleMusic from "@/components/streaming-embeds/apple-music";
 import Spotify from "@/components/streaming-embeds/spotify";
 import Beatport from "@/components/streaming-embeds/beatport";
+import YouTube from "@/components/streaming-embeds/youtube";
 
 
 export default function Post(props) {
@@ -116,6 +117,11 @@ export default function Post(props) {
             {/* Beatport embed */}
             {post.beatportEmbed && (
               <Beatport embedCode={post.beatportEmbed} />
+            )}
+
+            {/* YouTube embed */}
+            {post.youtubeEmbed && (
+              <YouTube embedCode={post.youtubeEmbed} />
             )}
 
           </div>
