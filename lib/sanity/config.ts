@@ -12,7 +12,7 @@ export const useCdn = false; // Disabled for stable connections
 export const projectId =
   process.env.NEXT_PUBLIC_SANITY_PROJECT_ID ||
   process.env.SANITY_STUDIO_PROJECT_ID ||
-  "f62x8w1j";
+  "q7x5ila9";
 
 export const dataset =
   process.env.NEXT_PUBLIC_SANITY_DATASET || ("production" as string);
