@@ -162,6 +162,29 @@ footer{
   display:flex; justify-content:space-between; flex-wrap:wrap;
 }
 .mark{letter-spacing:.08em; text-transform:lowercase; color:#8a8a8a}
+
+/* Wobble text effect styles */
+.wobble-text {
+  display: inline;
+}
+
+.wobble-char {
+  display: inline-block;
+  transition: transform 0.15s ease;
+  padding: 0 1px;
+}
+
+.wobble-char.mirrored {
+  transform: scaleX(-1);
+}
+
+.wobble-char.jitter {
+  transform: translateY(-1px) rotate(1deg);
+}
+
+.wobble-char.mirrored.jitter {
+  transform: scaleX(-1) translateY(1px) rotate(-1deg);
+}
 </style>
 </head>
 <body>
@@ -178,75 +201,75 @@ footer{
 <blockquote>
   <div class="tag">[Fragment begins]</div>
 
-  <p class="fracture" data-text="The Speaker does not speak in alphabets.">
+  <p class="fracture wobble-text" data-text="The Speaker does not speak in alphabets.">
     The Speaker does not speak in alphabets.<span class="glyph">ｴ</span>
   </p>
 
-  <p class="fracture" data-text="Their utterances are spatial — ridges of air-pressure, low tides of sub-bass, crystalline delays suspended in the dark.">
+  <p class="fracture wobble-text" data-text="Their utterances are spatial — ridges of air-pressure, low tides of sub-bass, crystalline delays suspended in the dark.">
     Their utterances are spatial — ridges<span class="glyph">▮</span> of air-pressure, low tides of sub-bass, crystalline delays suspended in the <span class="glyph">ｦ</span>dark.
   </p>
 
-  <p class="fracture" data-text="Where others hear silence, The Speaker hears the resonance of what is about to—already in motion.">
+  <p class="fracture wobble-text" data-text="Where others hear silence, The Speaker hears the resonance of what is about to—already in motion.">
     Where others hear silence, The Speaker hears the <span class="glyph">ξ</span>resonance of what is *about to*<span class="glyph">ﾒ</span>already in motion.
   </p>
 
-  <p class="fracture" data-text="Syntax: groove.">
+  <p class="fracture wobble-text" data-text="Syntax: groove.">
     Syntax:<span class="glyph">ｱ</span> groove.
   </p>
 
-  <p class="fracture" data-text="Subject: kick.">
+  <p class="fracture wobble-text" data-text="Subject: kick.">
     Subject: kick<span class="glyph">φ</span>.
   </p>
 
-  <p class="fracture" data-text="Predicate: bassline in phase alignment.">
+  <p class="fracture wobble-text" data-text="Predicate: bassline in phase alignment.">
     Predicate: bassline<span class="glyph">░</span> in phase alignment.
   </p>
 
-  <p class="fracture" data-text="Clause: percussion ghosts that enter and withdraw like tides against orbital rock.">
+  <p class="fracture wobble-text" data-text="Clause: percussion ghosts that enter and withdraw like tides against orbital rock.">
     Clause: percussion ghosts <span class="glyph">ﾑ</span>that enter and withdraw like tides against orbital rock.
   </p>
 
-  <p class="fracture" data-text="They do not write "songs."">
+  <p class="fracture wobble-text" data-text="They do not write "songs."">
     They do<span class="glyph">ｦ</span> not write "songs."
   </p>
 
-  <p class="fracture" data-text="They construct corridors through pressure and time.">
+  <p class="fracture wobble-text" data-text="They construct corridors through pressure and time.">
     They construct <span class="glyph">Φ</span>corridors through pressure and time.
   </p>
 
-  <p class="fracture" data-text="Every bar = coordinate.">
+  <p class="fracture wobble-text" data-text="Every bar = coordinate.">
     Every bar = coo<span class="glyph">ﾘ</span>rdinate.
   </p>
 
-  <p class="fracture" data-text="Every sweep = gravitational shift.">
+  <p class="fracture wobble-text" data-text="Every sweep = gravitational shift.">
     Every sweep = grav<span class="glyph">▮</span>itational shift.
   </p>
 
-  <p class="fracture" data-text="The listener is the spacecraft; the floor, an ocean without shore.">
+  <p class="fracture wobble-text" data-text="The listener is the spacecraft; the floor, an ocean without shore.">
     The listener is the spacecraft<span class="glyph">ﾂ</span>; the floor, an ocean without shore.
   </p>
 
-  <p class="fracture" data-text="Purpose: to return bodies to the Flow.">
+  <p class="fracture wobble-text" data-text="Purpose: to return bodies to the Flow.">
     Purpose: to return bodies<span class="glyph">ｴ</span> to the Flow.
   </p>
 
-  <p class="fracture" data-text="Not spectacle. Not rupture.">
+  <p class="fracture wobble-text" data-text="Not spectacle. Not rupture.">
     Not spectacle<span class="glyph">ｦ</span>. Not rupture.
   </p>
 
-  <p class="fracture" data-text="The Flow is the river forgotten until no land remains.">
+  <p class="fracture wobble-text" data-text="The Flow is the river forgotten until no land remains.">
     The Flow is the river forgotten<span class="glyph">ﾘ</span> until no land remains.
   </p>
 
-  <p class="fracture" data-text="Those who decode do not translate to words.">
+  <p class="fracture wobble-text" data-text="Those who decode do not translate to words.">
     Those who decode do not translate<span class="glyph">ξ</span> to words.
   </p>
 
-  <p class="fracture" data-text="They move.">
+  <p class="fracture wobble-text" data-text="They move.">
     They<span class="glyph">Φ</span> move.
   </p>
 
-  <p class="fracture" data-text="This is the meaning.">
+  <p class="fracture wobble-text" data-text="This is the meaning.">
     This<span class="glyph">ﾒ</span> is the meaning.
   </p>
 
@@ -258,6 +281,65 @@ footer{
   <span class="mark">ironicbuddha // raw deep techno</span>
 </footer>
 </div>
+
+<script>
+// Helper to get a random float between min and max
+function randBetween(min, max) {
+  return Math.random() * (max - min) + min;
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  // 1. Split every .wobble-text element into spans per character
+  const containers = document.querySelectorAll(".wobble-text");
+
+  containers.forEach(container => {
+    const text = container.textContent;
+    container.textContent = ""; // clear it
+
+    [...text].forEach(char => {
+      if (char === " ") {
+        // preserve spaces as actual spaces
+        container.appendChild(document.createTextNode(" "));
+      } else {
+        const span = document.createElement("span");
+        span.textContent = char;
+        span.classList.add("wobble-char");
+        container.appendChild(span);
+      }
+    });
+  });
+
+  // 2. Flip random batches of characters at controlled intervals
+  const chars = Array.from(document.querySelectorAll(".wobble-char"));
+
+  const flipBatch = () => {
+    // Pick how many characters to flip this round (1-15)
+    const numToFlip = Math.floor(randBetween(1, 16));
+
+    // Randomly select that many characters
+    const shuffled = [...chars].sort(() => Math.random() - 0.5);
+    const selected = shuffled.slice(0, numToFlip);
+
+    selected.forEach(span => {
+      // Randomly decide whether to flip or jitter
+      if (Math.random() < 0.7) {
+        span.classList.toggle("mirrored");
+      }
+
+      if (Math.random() < 0.3) {
+        span.classList.toggle("jitter");
+      }
+    });
+
+    // Wait a bit before next batch (500-1500ms for more controlled chaos)
+    const nextDelay = randBetween(500, 1500);
+    setTimeout(flipBatch, nextDelay);
+  };
+
+  // Start the flip cycle
+  flipBatch();
+});
+</script>
 
 </body>
 </html>
