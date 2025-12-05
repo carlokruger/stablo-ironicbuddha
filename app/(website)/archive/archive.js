@@ -4,8 +4,9 @@ import Pagination from "@/components/blog/pagination";
 import { getPaginatedPosts } from "@/lib/sanity/client";
 
 export default async function Post({ searchParams }) {
+  const resolvedSearchParams = await searchParams;
   // Fetch the current page from the query parameters, defaulting to 1 if it doesn't exist
-  const page = searchParams.page;
+  const page = resolvedSearchParams.page;
   const pageIndex = parseInt(page, 10) || 1;
 
   // Set the number of posts to be displayed per page

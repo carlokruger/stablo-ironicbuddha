@@ -6,6 +6,7 @@ import Loading from "@/components/loading";
 export const dynamic = "force-dynamic";
 
 export default async function ArchivePage({ searchParams }) {
+  const resolvedSearchParams = await searchParams;
   return (
     <>
       <Container className="relative">
@@ -16,9 +17,9 @@ export default async function ArchivePage({ searchParams }) {
           <p className="mt-2 text-lg">here is all my music</p>
         </div>
         <Suspense
-          key={searchParams.page || "1"}
+          key={resolvedSearchParams.page || "1"}
           fallback={<Loading />}>
-          <Archive searchParams={searchParams} />
+          <Archive searchParams={resolvedSearchParams} />
         </Suspense>
       </Container>
     </>
